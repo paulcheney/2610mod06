@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Home | Nationwide Mobile</title>
+  <meta name="description" content="Nationwide service for all mobile services">
+  <meta name="author" content="Paul Cheney">
+  <meta charset="UTF-8">
+
+  <!-- DO NOT LIE ABOUT WIDTH -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- OPEN GRAPH FOR SOCIAL MEDIS SHARING -->
+  <meta property="og:title" content="Home | Mobile Connection">
+  <meta property="og:description" content="Nationwide service for all mobile services">
+  <meta property="og:url" content="https://paulcheney.github.io/2610mod06">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://paulcheney.github.io/2610mod06/android-chrome-512x512.png" />
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nationwide Mobile">
+
+
+  <!-- STYLE SHEETS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+  <link href="css/styles.min.css" rel="stylesheet">
+
+  <!-- FAVORITE ICON -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+  <div id="headerWrapper">
+    <header>
+      <a href="/"><img src="images/logo1x.png" alt="logo" width="63" height="24"
+          srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x"></a>
+      <span>Nationwide Mobile</span>
+      <a class="phone" href="tel:18005551234"><img src="images/icon-phone.svg" alt="phone"></a>
+      <button id="mybtn" class="hamburger"></button>
+    </header>
+  </div>
+  <!-- end header wrapper -->
+
+  <div id="navWrapper">
+    <nav id="mynav" class="navigation">
+      <ul>
+        <li><a href="#">Plans</a></li>
+        <li><a href="#">Devices</a></li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="#">Coverage</a></li>
+        <li class="active"><a href="#">Reviews</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- end nav wrapper -->
+
+  <div id="mainWrapper">
+    <main>
+      <div class="hero">
+        <img src="images/hero.webp" alt="old car" width="1200" height="500">
+        <section class="info">
+        <div class="large">Get up to $800 Today</div>
+        <div class="small">On a virtual prepaid card when you switch 4 lines to Nationwide Mobile on any plan.</div>
+        <button>Signup Today</button>
+        </section>
+      </div>
+
+      <h1>Reviews</h1>
+      
+
+
+
+
+
+
+      <div class="reviewWrapper">
+        <h2>What our Customers Say</h2>
+        <div id="cards"></div> <!-- end cards -->
+      </div>
+
+
+    </main>
+  </div>
+  <!-- end main wrapper -->
+
+  <div id="footerWrapper">
+    <footer>
+      <p class="legal">&copy; <span id="year">inject</span> &bull; Paul Cheney</p>
+    </footer>
+  </div>
+  <!-- end footer wrapper -->
+
+  <script src="scripts/scripts.js"></script>
+  <script src="scripts/reviews.js" type="module"></script>
+</body>
+
+</html>

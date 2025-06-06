@@ -1,0 +1,230 @@
+/* ------------ prevent adjustments of font size after orientation changes.  ------------ */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  height: 100%;
+}
+
+/* ------------ apply a natural box layout model to all elements ------------ */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-family: $font-family;
+  font-weight: $font-weight-medium;
+  color: $font-color;
+}
+
+/******************** HEADER  ********************/
+#headerWrapper {
+  border-bottom: 1px solid $color-grey-90;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 25px auto 28px 44px;
+  align-items: end;
+  padding: 5px 0 5px $gutter;
+  column-gap: 6px;
+
+  span {
+    margin: 0;
+    font-weight: $font-weight-light;
+    font-size: 1.4rem;
+    color: $color-primary;
+  }
+  a.phone {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+
+    img {
+      width: 22px;
+      height: 22px;
+    }
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 5px;
+  }
+}
+
+/******************** HAMBURGER  ********************/
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: $color-grey-30;
+  cursor: pointer;
+  font-family: Verdana;
+}
+
+.hamburger::before {
+  content: "\2630";
+}
+
+.hamburger.show::before {
+  content: "\00D7";
+}
+
+
+/********************  NAVIGATION ********************/
+.navigation {
+  display: none;
+  &.show {
+    display: block;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width:175px;
+    position: absolute;
+    z-index: 999;
+    background-color: white;
+    right:0;
+  }
+
+  a {
+    display: block;
+    padding: 0.75rem;
+    color: $color-grey-40;
+    text-decoration: none;
+    border-bottom: 1px solid $color-grey-90;
+    font-weight: $font-weight-light;
+    &:hover {
+      background-color:$color-grey-90;
+      color: $color-primary;
+    }
+  }
+
+  .active a {
+    background-color: $color-grey-95;
+    color:$color-grey-10;
+  }
+}
+
+/* ------------ BODY STUFF ------------ */
+main {
+  h1 {
+    font-size: 2rem;
+    font-weight: $font-weight-light;
+    color: $color-primary;
+    margin: 1rem $gutter;
+  }
+  h2 {
+    font-size: 1.5rem;
+    font-weight: $font-weight-bold;
+    color: $color-grey-50;
+    margin: 1rem $gutter;
+  }
+  
+
+} // end main
+
+
+
+/* ------------ HERO ------------ */
+// begin main styling
+div.hero {
+  position: relative;
+  img {
+    display: block;
+    width: 100%; 
+    height: auto;
+  }
+  .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: rgba(255,255,255,0.5);
+    .large {
+      color: $color-grey-10;
+      font-weight: $font-weight-bold;
+      font-size: 7vw;
+      padding: .2rem $gutter;
+    }
+    .small {
+      color: $color-grey-10;
+      font-weight: $font-weight-medium;
+      font-size: 4vw;
+      padding: .2rem $gutter;
+    }
+    button {
+      margin-bottom: .5rem;
+      background-color: $color-primary;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: .5rem 2rem;
+      animation-name: sell;
+      animation-duration: 2s;
+      animation-delay: 1s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+    }   
+    
+  }
+}
+
+/* The animation code */
+@keyframes sell {
+  from {background-color: $color-primary;}
+  to {background-color: $color-primary;}
+}
+
+
+
+/* ------------ REVIEWS ------------ */
+#cards {
+  margin: 1rem $gutter;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: $gutter;
+  section {
+    border: solid 1px $color-grey-90;
+    padding:$gutter;
+    border-radius: 8px;
+    box-shadow: 0 0 8px $color-grey-90;
+    text-align: center;
+  }  
+  h3 {
+    margin: 1.5rem $gutter 0 $gutter;
+    color: $color-grey-40;
+  }
+  img {
+    width: 20px; 
+    height: 20px;
+    padding: 3px;
+  }
+  p {
+    margin: 0;
+    font-weight: $font-weight-light;
+  }
+}
+
+
+
+/* ------------ FOOTER ------------ */
+#footerWrapper {
+  color:$color-grey-50;
+  background-color: $color-grey-95;
+  border-top: solid 1px $color-grey-90;
+}
+
+footer {
+  font-weight: $font-weight-medium;
+  font-size: .8rem;
+  padding: .5rem $gutter;
+  text-align: center;
+}
